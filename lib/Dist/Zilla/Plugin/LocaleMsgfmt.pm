@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::LocaleMsgfmt;
 BEGIN {
-  $Dist::Zilla::Plugin::LocaleMsgfmt::VERSION = '1.200';
+  $Dist::Zilla::Plugin::LocaleMsgfmt::VERSION = '1.201';
 }
 # ABSTRACT: Dist::Zilla plugin that compiles Local::Msgfmt .po files to .mo files
 
@@ -59,7 +59,7 @@ Dist::Zilla::Plugin::LocaleMsgfmt - Dist::Zilla plugin that compiles Local::Msgf
 
 =head1 VERSION
 
-version 1.200
+version 1.201
 
 =head1 DESCRIPTION
 

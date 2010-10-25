@@ -24,7 +24,7 @@ resources:
   bugtracker: http://github.com/pdonelan/Dist-Zilla-Plugin-LocaleMsgfmt/issues
   homepage: http://github.com/pdonelan/Dist-Zilla-Plugin-LocaleMsgfmt/tree
   repository: git://github.com/pdonelan/Dist-Zilla-Plugin-LocaleMsgfmt.git
-version: 1.200
+version: 1.201
 x_Dist_Zilla:
   plugins:
     -
@@ -156,10 +156,6 @@ x_Dist_Zilla:
       name: CheckChangeLog
       version: 0.01
     -
-      class: Dist::Zilla::Plugin::CopyReadmeFromBuild
-      name: CopyReadmeFromBuild
-      version: 0.0014
-    -
       class: Dist::Zilla::Plugin::CheckChangesHasContent
       name: CheckChangesHasContent
       version: 0.003
@@ -195,10 +191,6 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::UpdateGitHub
       name: UpdateGitHub
       version: 0.0014
-    -
-      class: Dist::Zilla::Plugin::FakeRelease
-      name: FakeRelease
-      version: 4.102342
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

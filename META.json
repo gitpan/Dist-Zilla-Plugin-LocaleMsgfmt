@@ -47,7 +47,7 @@
          "web" : "http://github.com/pdonelan/Dist-Zilla-Plugin-LocaleMsgfmt/tree"
       }
    },
-   "version" : "1.200",
+   "version" : "1.201",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
@@ -213,11 +213,6 @@
             "version" : "0.01"
          },
          {
-            "class" : "Dist::Zilla::Plugin::CopyReadmeFromBuild",
-            "name" : "CopyReadmeFromBuild",
-            "version" : "0.0014"
-         },
-         {
             "class" : "Dist::Zilla::Plugin::CheckChangesHasContent",
             "name" : "CheckChangesHasContent",
             "version" : "0.003"
@@ -261,11 +256,6 @@
             "class" : "Dist::Zilla::Plugin::UpdateGitHub",
             "name" : "UpdateGitHub",
             "version" : "0.0014"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::FakeRelease",
-            "name" : "FakeRelease",
-            "version" : "4.102342"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",

@@ -28,7 +28,7 @@ my %WriteMakefileArgs = (
     'Locale::Msgfmt' => '0.14',
     'Moose' => '0'
   },
-  'VERSION' => '1.200',
+  'VERSION' => '1.201',
   'test' => {
     'TESTS' => 't/*.t'
   }

@@ -3,7 +3,7 @@ NAME
     Local::Msgfmt .po files to .mo files
 
 VERSION
-    version 1.200
+    version 1.201
 
 DESCRIPTION
     Put the following in your dist.ini
