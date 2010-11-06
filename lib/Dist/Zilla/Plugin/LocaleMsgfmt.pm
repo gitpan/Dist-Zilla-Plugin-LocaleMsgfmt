@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::LocaleMsgfmt;
 BEGIN {
-  $Dist::Zilla::Plugin::LocaleMsgfmt::VERSION = '1.201';
+  $Dist::Zilla::Plugin::LocaleMsgfmt::VERSION = '1.202';
 }
 # ABSTRACT: Dist::Zilla plugin that compiles Local::Msgfmt .po files to .mo files
 
@@ -59,7 +59,7 @@ Dist::Zilla::Plugin::LocaleMsgfmt - Dist::Zilla plugin that compiles Local::Msgf
 
 =head1 VERSION
 
-version 1.201
+version 1.202
 
 =head1 DESCRIPTION
 
@@ -79,6 +79,9 @@ files, via Locale::Msgfmt.
 
 =head2 mvp_multivalue_args
 
+For Config::MVP - specify setting names that may have multiple values and that will always
+be stored in an arrayref
+
 =head2 before_build
 
 =head1 TODO
@@ -88,7 +91,7 @@ the build dir.
 
 =head1 AUTHOR
 
-Patrick Donelan <pat@patspam.com>
+Patrick Donelan <pdonelan@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

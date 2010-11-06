@@ -1,7 +1,7 @@
 ---
 abstract: 'Dist::Zilla plugin that compiles Local::Msgfmt .po files to .mo files'
 author:
-  - 'Patrick Donelan <pat@patspam.com>'
+  - 'Patrick Donelan <pdonelan@cpan.org>'
 build_requires:
   File::Find: 0
   File::Temp: 0
@@ -24,105 +24,153 @@ resources:
   bugtracker: http://github.com/pdonelan/Dist-Zilla-Plugin-LocaleMsgfmt/issues
   homepage: http://github.com/pdonelan/Dist-Zilla-Plugin-LocaleMsgfmt/tree
   repository: git://github.com/pdonelan/Dist-Zilla-Plugin-LocaleMsgfmt.git
-version: 1.201
+version: 1.202
 x_Dist_Zilla:
   plugins:
     -
+      class: Dist::Zilla::Plugin::Git::Check
+      name: '@PDONELAN/@Git/Check'
+      version: 1.102810
+    -
+      class: Dist::Zilla::Plugin::Git::Commit
+      name: '@PDONELAN/@Git/Commit'
+      version: 1.102810
+    -
+      class: Dist::Zilla::Plugin::Git::Tag
+      name: '@PDONELAN/@Git/Tag'
+      version: 1.102810
+    -
+      class: Dist::Zilla::Plugin::Git::Push
+      name: '@PDONELAN/@Git/Push'
+      version: 1.102810
+    -
       class: Dist::Zilla::Plugin::GatherDir
-      name: GatherDir
+      name: '@PDONELAN/GatherDir'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::MetaYAML
-      name: MetaYAML
+      name: '@PDONELAN/MetaYAML'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::ExecDir
-      name: ExecDir
+      name: '@PDONELAN/ExecDir'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::ShareDir
-      name: ShareDir
+      name: '@PDONELAN/ShareDir'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::License
-      name: License
+      name: '@PDONELAN/License'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::MetaJSON
-      name: MetaJSON
+      name: '@PDONELAN/MetaJSON'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::ReadmeFromPod
-      name: ReadmeFromPod
+      name: '@PDONELAN/ReadmeFromPod'
       version: 0.14
     -
-      class: Dist::Zilla::Plugin::CompileTests
-      name: CompileTests
-      version: 1.101800
-    -
       class: Dist::Zilla::Plugin::EOLTests
-      name: EOLTests
+      name: '@PDONELAN/EOLTests'
       version: 0.02
     -
       class: Dist::Zilla::Plugin::PodCoverageTests
-      name: PodCoverageTests
+      name: '@PDONELAN/PodCoverageTests'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::PodSyntaxTests
-      name: PodSyntaxTests
+      name: '@PDONELAN/PodSyntaxTests'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::PortabilityTests
-      name: PortabilityTests
+      name: '@PDONELAN/PortabilityTests'
       version: 1.101420
     -
-      class: Dist::Zilla::Plugin::CheckChangesTests
-      name: CheckChangesTests
-      version: 1.100900
+      class: Dist::Zilla::Plugin::CompileTests
+      name: '@PDONELAN/CompileTests'
+      version: 1.101800
     -
       class: Dist::Zilla::Plugin::Manifest
-      name: Manifest
+      name: '@PDONELAN/Manifest'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::PruneCruft
-      name: PruneCruft
+      name: '@PDONELAN/PruneCruft'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::ManifestSkip
-      name: ManifestSkip
+      name: '@PDONELAN/ManifestSkip'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::ExtraTests
-      name: ExtraTests
+      name: '@PDONELAN/ExtraTests'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::PkgVersion
-      name: PkgVersion
+      name: '@PDONELAN/PkgVersion'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::PodWeaver
-      name: PodWeaver
+      name: '@PDONELAN/PodWeaver'
       version: 3.101641
     -
       class: Dist::Zilla::Plugin::NextRelease
-      name: NextRelease
+      name: '@PDONELAN/NextRelease'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
-      name: AutoPrereqs
+      name: '@PDONELAN/AutoPrereqs'
       version: 4.102342
     -
       class: Dist::Zilla::Plugin::MinimumPerl
-      name: MinimumPerl
+      name: '@PDONELAN/MinimumPerl'
       version: 0.02
     -
-      class: Dist::Zilla::Plugin::Prereqs
-      config:
-        Dist::Zilla::Plugin::Prereqs:
-          phase: test
-          type: requires
-      name: TestRequires
+      class: Dist::Zilla::Plugin::Git::NextVersion
+      name: '@PDONELAN/Git::NextVersion'
+      version: 1.102810
+    -
+      class: Dist::Zilla::Plugin::GithubMeta
+      name: '@PDONELAN/GithubMeta'
+      version: 0.10
+    -
+      class: Dist::Zilla::Plugin::Bugtracker
+      name: '@PDONELAN/Bugtracker'
+      version: 1.102670
+    -
+      class: Dist::Zilla::Plugin::MetaConfig
+      name: '@PDONELAN/MetaConfig'
       version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::MakeMaker
+      name: '@PDONELAN/MakeMaker'
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::CheckChangeLog
+      name: '@PDONELAN/CheckChangeLog'
+      version: 0.01
+    -
+      class: Dist::Zilla::Plugin::CheckChangesHasContent
+      name: '@PDONELAN/CheckChangesHasContent'
+      version: 0.003
+    -
+      class: Dist::Zilla::Plugin::TestRelease
+      name: '@PDONELAN/TestRelease'
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::ConfirmRelease
+      name: '@PDONELAN/ConfirmRelease'
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::UploadToCPAN
+      name: '@PDONELAN/UploadToCPAN'
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::UpdateGitHub
+      name: '@PDONELAN/UpdateGitHub'
+      version: 0.0014
     -
       class: Dist::Zilla::Plugin::Prereqs
       config:
@@ -131,66 +179,6 @@ x_Dist_Zilla:
           type: requires
       name: Prereqs
       version: 4.102342
-    -
-      class: Dist::Zilla::Plugin::Git::NextVersion
-      name: Git::NextVersion
-      version: 1.102810
-    -
-      class: Dist::Zilla::Plugin::GithubMeta
-      name: GithubMeta
-      version: 0.10
-    -
-      class: Dist::Zilla::Plugin::Bugtracker
-      name: Bugtracker
-      version: 1.102670
-    -
-      class: Dist::Zilla::Plugin::MetaConfig
-      name: MetaConfig
-      version: 4.102342
-    -
-      class: Dist::Zilla::Plugin::MakeMaker
-      name: MakeMaker
-      version: 4.102342
-    -
-      class: Dist::Zilla::Plugin::CheckChangeLog
-      name: CheckChangeLog
-      version: 0.01
-    -
-      class: Dist::Zilla::Plugin::CheckChangesHasContent
-      name: CheckChangesHasContent
-      version: 0.003
-    -
-      class: Dist::Zilla::Plugin::TestRelease
-      name: TestRelease
-      version: 4.102342
-    -
-      class: Dist::Zilla::Plugin::Git::Check
-      name: '@Git/Check'
-      version: 1.102810
-    -
-      class: Dist::Zilla::Plugin::Git::Commit
-      name: '@Git/Commit'
-      version: 1.102810
-    -
-      class: Dist::Zilla::Plugin::Git::Tag
-      name: '@Git/Tag'
-      version: 1.102810
-    -
-      class: Dist::Zilla::Plugin::Git::Push
-      name: '@Git/Push'
-      version: 1.102810
-    -
-      class: Dist::Zilla::Plugin::ConfirmRelease
-      name: ConfirmRelease
-      version: 4.102342
-    -
-      class: Dist::Zilla::Plugin::UploadToCPAN
-      name: UploadToCPAN
-      version: 4.102342
-    -
-      class: Dist::Zilla::Plugin::UpdateGitHub
-      name: UpdateGitHub
-      version: 0.0014
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
