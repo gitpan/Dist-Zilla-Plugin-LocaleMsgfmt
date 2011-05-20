@@ -9,12 +9,16 @@ use ExtUtils::MakeMaker 6.31;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Dist::Zilla plugin that compiles Local::Msgfmt .po files to .mo files',
+  'ABSTRACT' => 'compiles .po files to .mo files with Local::Msgfmt',
   'AUTHOR' => 'Patrick Donelan <pdonelan@cpan.org>',
   'BUILD_REQUIRES' => {
+    'Dist::Zilla' => '1.093250',
+    'Dist::Zilla::Tester' => '0',
     'File::Find' => '0',
     'File::Temp' => '0',
-    'Test::More' => '0'
+    'Test::File' => '0',
+    'Test::More' => '0',
+    'Test::Warn' => '0'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
@@ -26,9 +30,11 @@ my %WriteMakefileArgs = (
   'PREREQ_PM' => {
     'Dist::Zilla::Role::BeforeBuild' => '0',
     'Locale::Msgfmt' => '0.14',
-    'Moose' => '0'
+    'Moose' => '0',
+    'MooseX::Has::Sugar' => '0',
+    'Path::Class' => '0'
   },
-  'VERSION' => '1.202',
+  'VERSION' => '1.203',
   'test' => {
     'TESTS' => 't/*.t'
   }
